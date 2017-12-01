@@ -1,0 +1,9 @@
+## Interface: 70300
+## Title: SuBiDo
+## Author: Lizho@github
+## Version: 1.0.0
+## Notes: Show a window about speed.
+## DefaultState: Enabled
+## LoadOnDemand: 0
+main.lua
+MainForm.xml
