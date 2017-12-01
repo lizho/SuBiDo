@@ -25,7 +25,7 @@ function SuBiDoFrameUpdate()
   textFSpeed = getglobal("SpeedInfoFrameTextFSpeed"); 
   textSSpeed = getglobal("SpeedInfoFrameTextSSpeed"); 
   sp, gsp, fsp, ssp = GetUnitSpeed('player')
-  stmp = '%s Speed:\t%0.2f yard/s | %s'
+  stmp = '%s Speed:\t%0.2f yards/s | %s'
   textSpeed:SetText(string.format(stmp, 'Current', sp, rate(sp))); 
   textGSpeed:SetText(string.format(stmp, 'Ground', gsp, rate(gsp))); 
   textFSpeed:SetText(string.format(stmp, 'Flight', fsp, rate(fsp))); 
