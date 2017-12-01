@@ -1,0 +1,68 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+<Frame name="SpeedInfoFrame" parent="UIParent" hidden="false" enableMouse="true" movable="true"> 
+  <Size x="280" y="175" /> 
+  <Anchors> 
+    <Anchor point="BOTTOMLEFT" /> 
+  </Anchors> 
+  <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border"> 
+    <BackgroundInsets> 
+      <AbsInset left="11" right="12" top="12" bottom="11" /> 
+    </BackgroundInsets> 
+  </Backdrop> 
+  <Layers> 
+    <Layer level="ARTWORK"> 
+	  <Texture setAllPoints="true" />
+      <FontString name="$parentTextTitle" inherits="GameFontNormal" text="Speed Infomation"> 
+        <Anchors> 
+          <Anchor point="TOP" relativeTo="SpeedInfoFrame"> 
+            <Offset y="-15" /> 
+          </Anchor> 
+        </Anchors> 
+      </FontString> 
+      <FontString name="$parentTextSpeed" inherits="GameFontNormal"> 
+        <Anchors> 
+          <Anchor point="TOPLEFT" relativeTo="SpeedInfoFrame"> 
+            <Offset x="15" y="-60" /> 
+          </Anchor> 
+        </Anchors> 
+      </FontString> 
+      <FontString name="$parentTextGSpeed" inherits="GameFontNormal"> 
+        <Anchors> 
+          <Anchor point="TOPLEFT" relativeTo="SpeedInfoFrame"> 
+            <Offset x="15" y="-85" /> 
+          </Anchor> 
+        </Anchors> 
+      </FontString> 
+      <FontString name="$parentTextFSpeed" inherits="GameFontNormal" text="Money"> 
+        <Anchors> 
+          <Anchor point="TOPLEFT" relativeTo="SpeedInfoFrame"> 
+            <Offset x="15" y="-110" /> 
+          </Anchor> 
+        </Anchors> 
+      </FontString> 
+      <FontString name="$parentTextSSpeed" inherits="GameFontNormal" text="Money"> 
+        <Anchors> 
+          <Anchor point="TOPLEFT" relativeTo="SpeedInfoFrame"> 
+            <Offset x="15" y="-135" /> 
+          </Anchor> 
+        </Anchors> 
+      </FontString> 
+    </Layer> 
+  </Layers> 
+  <Scripts> 
+    <OnDragStart>
+      self:StartMoving();
+    </OnDragStart>
+    <OnDragStop>
+      self:StopMovingOrSizing();
+    </OnDragStop>
+    <OnLoad> 
+      SuBiDoLoad(); 
+      self:RegisterForDrag("MiddleButton");
+    </OnLoad> 
+    <OnUpdate> 
+      SuBiDoFrameUpdate(); 
+    </OnUpdate> 
+  </Scripts> 
+</Frame> 
+</Ui>
